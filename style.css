@@ -12,6 +12,12 @@ body {
     font-size: 1.15em; /* Increased from 1em to make characters larger */
 }
 
+/* Headings */
+h2 {
+    font-size: 1.75em; /* Example size */
+    color: rgb(47, 76, 92); /* Consistent color with body text */
+}
+
 /* Container and Main Layout */
 .container {
     max-width: 800px;
@@ -92,7 +98,7 @@ body {
 }
 
 .conference h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Crimson Text', serif;
     font-weight: 700;
     font-size: 1.6em; /* Increased from 1.8em */
     color: rgb(47, 76, 92);
@@ -109,7 +115,7 @@ body {
 /* Hyperlink Styles (Consistent Font) */
 a {
     font-family: 'Crimson Text', serif; /* Set to the same font as the body */
-    font-size: 1.1em; /* Increased from 1em */
+    font-size: 1em; /* Increased from 1em */
     color: rgb(7, 149, 166);
     text-decoration: none;
     font-weight: 600;
