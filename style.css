@@ -1,81 +1,65 @@
 /* QUASY series page
+   Shares its colours and fonts with the workshop sites (see README.md).
    Colours are defined once here; change them in this block only. */
 :root {
-    --slate: #2f4c5c;      /* logo slate: text and headings */
-    --teal: #0795a6;       /* logo teal: decorative only (lines, bullets) */
-    --teal-text: #067a88;  /* darker teal for links (WCAG AA on white) */
-    --ink: #1E3542;        /* footer background, link hover */
-    --page: #f8f8f8;
-    --line: #c0c0c0;
+    --ink: #1E3542;        /* deep logo slate: headings, footer */
+    --slate: #2f4c5c;      /* logo slate */
+    --teal: #0795a6;       /* logo teal: lines and dots only */
+    --teal-text: #067a88;  /* darker teal for links and labels (WCAG AA on white) */
+    --text: #24323a;
+    --muted: #55656e;
+    --bg: #ffffff;
+    --bg-soft: #f4f7f8;
+    --line: #dbe3e6;
+
+    --font-head: "Jost", "Futura", "Century Gothic", "Avenir Next", sans-serif;
+    --font-body: "Source Sans 3", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
-/* General */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
 body {
-    font-family: 'Crimson Text', Georgia, serif;
     margin: 0;
-    padding: 0;
-    background-color: var(--page);
-    color: var(--slate);
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    font-size: 1.15em;
-    line-height: 1.5;
 }
 
-h2 {
-    font-size: 1.75em;
-    color: var(--slate);
-    margin: 1.2em 0 0.5em;
-}
-
-a {
-    color: var(--teal-text);
-    text-decoration: none;
-    font-weight: 600;
-}
-a:hover {
+h2, h3 {
+    font-family: var(--font-head);
+    font-weight: 500;
     color: var(--ink);
-    text-decoration: underline;
+    line-height: 1.2;
 }
+h2 { font-size: 1.75rem; margin: 0 0 0.6em; }
+h3 { font-size: 1.3rem; margin: 0 0 4px; }
 
-/* Layout */
-.container {
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    background: #ffffff;
-    flex-grow: 1;
-    box-sizing: border-box;
-}
+a { color: var(--teal-text); text-underline-offset: 0.15em; }
+a:hover { color: var(--ink); }
 
-.content {
-    padding: 0 20px 20px;
-}
-
-.section {
-    margin-bottom: 30px;
-}
-
-/* Header */
+/* ---------- Header ---------- */
 .header {
     text-align: center;
-    margin-bottom: 10px;
+    padding: 36px 24px 0;
+    border-bottom: 1px solid var(--line);
 }
-
 .logo-image {
-    width: 100%;
-    max-width: 350px;
+    width: min(320px, 80%);
     height: auto;
-    margin-top: 20px;
 }
-
-/* Subtitle with a thin rule on each side */
 .series-subtitle {
-    font-size: 1.1em;
-    margin: 10px 0 20px;
+    max-width: 760px;
+    margin: 14px auto 18px;
+    font-family: var(--font-head);
+    font-size: 1.1rem;
+    color: var(--slate);
     display: flex;
     align-items: center;
     gap: 14px;
@@ -86,96 +70,156 @@ a:hover {
     flex: 1;
     border-bottom: 1px solid var(--line);
 }
-
-/* Workshops */
-.conference {
-    margin-bottom: 28px;
+.page-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 28px;
 }
-
-.conference h3 {
-    font-weight: 700;
-    font-size: 1.6em;
+.page-nav a {
+    font-family: var(--font-head);
     color: var(--slate);
-    margin: 10px 0 2px;
+    text-decoration: none;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
 }
+.page-nav a:hover { color: var(--ink); border-bottom-color: var(--teal); }
 
-.conference p {
-    font-size: 1.1em;
-    margin: 2px 0;
+/* ---------- Layout ---------- */
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 36px 24px 24px;
+    flex: 1 0 auto;
 }
+.section { margin-bottom: 48px; scroll-margin-top: 16px; }
+.section p { margin: 0 0 1em; }
 
-.conference .edition {
-    font-size: 1em;
-    font-style: italic;
+/* ---------- Next workshop ---------- */
+.next {
+    background: var(--bg-soft);
+    border-top: 3px solid var(--teal);
+    padding: 22px 26px 26px;
+    margin-bottom: 48px;
 }
+.next-label {
+    margin: 0 0 4px;
+    font-family: var(--font-head);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--teal-text);
+}
+.next h2 { font-size: 1.6rem; margin-bottom: 6px; }
+.next p { margin: 0 0 16px; color: var(--muted); }
+.button {
+    display: inline-block;
+    font-family: var(--font-head);
+    background: var(--teal-text);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 3px;
+}
+.button:hover { background: var(--ink); color: #fff; }
+
+/* ---------- Workshops timeline ----------
+   A vertical line with one node per workshop, echoing the
+   dependency tree in the logo. The upcoming one has a filled node. */
+.timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 30px;
+    position: relative;
+}
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: var(--teal);
+    opacity: 0.45;
+}
+.timeline > li {
+    position: relative;
+    padding-bottom: 30px;
+}
+.timeline > li:last-child { padding-bottom: 0; }
+.timeline > li::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 3px solid var(--teal);
+}
+.timeline > li.upcoming::before { background: var(--teal); }
+
+.timeline p { margin: 0 0 2px; }
+.timeline .edition { color: var(--muted); }
+.timeline .chairs { color: var(--muted); font-size: 0.95rem; }
 
 .links {
     list-style: none;
     margin: 6px 0 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 22px;
 }
-.links li {
+
+/* ---------- Topics ---------- */
+.topics-list {
+    list-style: none;
+    margin: 0 0 1em;
+    padding: 0;
+}
+.topics-list li {
     position: relative;
-    padding-left: 18px;
-    margin: 2px 0;
+    padding: 6px 0 6px 22px;
+    border-bottom: 1px solid var(--line);
 }
-.links li::before {    /* a small tree node */
+.topics-list li::before {
     content: "";
     position: absolute;
     left: 2px;
-    top: 0.62em;
-    width: 7px;
-    height: 7px;
+    top: 0.95em;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: var(--teal);
 }
 
-/* Topics */
-.topics-list {
-    padding-left: 20px;
-    margin-top: 10px;
-}
-.topics-list li {
-    margin-bottom: 12px;
-}
-.topics-list li::marker {
-    color: var(--teal);
-}
-
-/* Footer */
+/* ---------- Footer ---------- */
 .footer {
+    background: var(--ink);
+    color: #dfe8ec;
     text-align: center;
-    padding: 15px 0;
-    background-color: var(--ink);
-    color: #ffffff;
-    margin-top: auto;
-    width: 100%;
+    padding: 20px 24px;
+    font-size: 0.95rem;
 }
-.footer p {
-    margin: 0;
-}
+.footer p { margin: 0; }
 
-/* Narrow screens */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .content {
-        padding: 0 10px 10px;
-    }
-    .series-subtitle {
-        font-size: 1em;
-    }
-    .conference h3 {
-        font-size: 1.4em;
-    }
-    .conference p {
-        font-size: 1em;
-    }
-    .footer {
-        font-size: 0.85em;
-    }
+/* ---------- Narrow screens ---------- */
+@media (max-width: 520px) {
+    .header { padding-top: 24px; }
+    .logo-image { width: min(240px, 75%); }
+    .series-subtitle { font-size: 1rem; }
+    .series-subtitle::before,
+    .series-subtitle::after { display: none; }
+    .page-nav { gap: 4px 18px; }
+    .container { padding: 28px 18px 18px; }
+    .next { padding: 18px 18px 22px; }
+    .next h2 { font-size: 1.4rem; }
+    h2 { font-size: 1.5rem; }
+    .section { margin-bottom: 40px; }
 }

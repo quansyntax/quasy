@@ -5,91 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QUASY – International Workshop on Quantitative Syntax</title>
     <meta name="description" content="QUASY is an international workshop series on quantitative approaches to syntax, held as part of SyntaxFest. Past and upcoming workshops, proceedings and contact.">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Link previews (email, chat, social media) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="QUASY">
+    <meta property="og:title" content="QUASY – International Workshop on Quantitative Syntax">
+    <meta property="og:description" content="A workshop series on quantitative approaches to syntax, held as part of SyntaxFest. Next: QUASY 2027, Prague, August 30 – September 3, 2027.">
+    <meta property="og:url" content="https://quansyntax.github.io/quasy/">
+    <meta property="og:image" content="https://quansyntax.github.io/quasy/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="QUASY – Quantitative Syntax logo">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <img src="images/logonew.png" width="700" height="401" alt="QUASY – Quantitative Syntax logo" class="logo-image">
-            <p class="series-subtitle">International Workshop on Quantitative Syntax</p>
-        </header>
+    <header class="header">
+        <img src="images/logonew.png" width="700" height="401" alt="QUASY – Quantitative Syntax logo" class="logo-image">
+        <p class="series-subtitle">International Workshop on Quantitative Syntax</p>
+        <nav aria-label="On this page">
+            <ul class="page-nav">
+                <li><a href="#about">About</a></li>
+                <li><a href="#workshops">Workshops</a></li>
+                <li><a href="#topics">Topics</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <main class="content">
-            <section id="about" class="section">
-                <h2>About QUASY</h2>
-                <p>QUASY is an international workshop series dedicated to quantitative approaches to syntax. It brings together researchers who study syntax with quantitative, statistical and computational methods grounded in empirical language data. Since its first edition in 2019, QUASY has been held as part of SyntaxFest, alongside related conferences and workshops on syntax, treebanks and parsing.</p>
-                <p>Corpora and treebanks are growing rapidly in (computational) linguistics, and statistical methods are increasingly popular in the linguistic community. Yet the potential of combining such structured data with statistical methods remains largely unexplored. QUASY responds to the need for meetings devoted to quantitative syntactic analysis and to theorizing based on empirical data. The workshop is held under the auspices of the International Quantitative Linguistics Association (IQLA).</p>
-            </section>
+    <main class="container">
+        <!-- Next workshop: update this box when the next edition is announced -->
+        <section class="next" aria-labelledby="next-title">
+            <p class="next-label">Next workshop</p>
+            <h2 id="next-title">QUASY 2027 · Prague</h2>
+            <p>August 30 – September 3, 2027, part of SyntaxFest 2027<br>
+               Paper submission deadline: April 22, 2027 (23:59 AoE)</p>
+            <a class="button" href="https://quansyntax.github.io/quasy2027/">Visit the QUASY 2027 website</a>
+        </section>
 
-            <section id="workshops" class="section">
-                <h2>Workshops</h2>
+        <section id="about" class="section">
+            <h2>About QUASY</h2>
+            <p>QUASY is an international workshop series dedicated to quantitative approaches to syntax. It brings together researchers who study syntax with quantitative, statistical and computational methods grounded in empirical language data. Since its first edition in 2019, QUASY has been held as part of <a href="https://syntaxfest.github.io/">SyntaxFest</a>, alongside related conferences and workshops on syntax, treebanks and parsing. Each workshop is organized by two co-chairs.</p>
+            <p>Corpora and treebanks are growing rapidly in (computational) linguistics, and statistical methods are increasingly popular in the linguistic community. Yet the potential of combining such structured data with statistical methods remains largely unexplored. QUASY responds to the need for meetings devoted to quantitative syntactic analysis and to theorizing based on empirical data. The workshop is held under the auspices of the <a href="https://iqla.org/">International Quantitative Linguistics Association (IQLA)</a>.</p>
+        </section>
 
-                <article class="conference">
+        <section id="workshops" class="section">
+            <h2>Workshops</h2>
+            <!-- To add an edition: copy one <li> block to the top of this list.
+                 Give the upcoming edition class="upcoming" (filled dot). -->
+            <ol class="timeline">
+                <li class="upcoming">
                     <h3>QUASY 2027</h3>
-                    <p class="edition">4th workshop · part of SyntaxFest 2027</p>
+                    <p class="edition">4th workshop · part of <a href="https://syntaxfest.github.io/syntaxfest27/">SyntaxFest 2027</a></p>
                     <p>August 30 – September 3, 2027, Prague, Czech Republic</p>
+                    <p class="chairs">Chairs: Xinying Chen (University of Ostrava) and Yaqin Wang (Guangdong University of Foreign Studies)</p>
                     <ul class="links">
                         <li><a href="https://quansyntax.github.io/quasy2027/">Workshop website</a></li>
                     </ul>
-                </article>
+                </li>
 
-                <article class="conference">
+                <li>
                     <h3>QUASY 2025</h3>
-                    <p class="edition">3rd workshop · part of SyntaxFest 2025</p>
+                    <p class="edition">3rd workshop · part of <a href="https://syntaxfest.github.io/syntaxfest25/">SyntaxFest 2025</a></p>
                     <p>August 26–29, 2025, Ljubljana, Slovenia</p>
+                    <p class="chairs">Chairs: Xinying Chen (University of Ostrava) and Yaqin Wang (Guangdong University of Foreign Studies)</p>
                     <ul class="links">
                         <li><a href="https://quansyntax.github.io/quasy2025/index.html">Workshop website</a></li>
                         <li><a href="https://aclanthology.org/volumes/2025.quasy-1/">Proceedings (ACL Anthology)</a></li>
                     </ul>
-                </article>
+                </li>
 
-                <article class="conference">
+                <li>
                     <h3>QUASY 2021</h3>
-                    <p class="edition">2nd workshop · part of SyntaxFest 2021</p>
+                    <p class="edition">2nd workshop · part of <a href="https://syntaxfest.github.io/syntaxfest21/">SyntaxFest 2021</a></p>
                     <p>March 21–25, 2022, online (hosted by Sofia, Bulgaria)</p>
+                    <p class="chairs">Chairs: Radek Čech (University of Ostrava) and Xinying Chen (Xi’an Jiaotong University)</p>
                     <ul class="links">
                         <li><a href="https://quasy-2021.webnode.cz/">Workshop website</a></li>
                         <li><a href="https://aclanthology.org/volumes/2021.quasy-1/">Proceedings (ACL Anthology)</a></li>
                     </ul>
-                </article>
+                </li>
 
-                <article class="conference">
+                <li>
                     <h3>QUASY 2019</h3>
-                    <p class="edition">1st workshop · part of SyntaxFest 2019</p>
+                    <p class="edition">1st workshop · part of <a href="https://syntaxfest.github.io/syntaxfest19/">SyntaxFest 2019</a></p>
                     <p>August 26–30, 2019, Paris, France</p>
+                    <p class="chairs">Chairs: Xinying Chen (University of Ostrava &amp; Xi’an Jiaotong University) and Ramon Ferrer-i-Cancho (Universitat Politècnica de Catalunya)</p>
                     <ul class="links">
                         <li><a href="https://quasy-2019.webnode.page/">Workshop website</a></li>
                         <li><a href="https://aclanthology.org/volumes/W19-79/">Proceedings (ACL Anthology)</a></li>
                     </ul>
-                </article>
-            </section>
+                </li>
+            </ol>
+        </section>
 
-            <section id="topics" class="section">
-                <h2>Topics</h2>
-                <p>Topics include, but are not limited to:</p>
-                <ul class="topics-list">
-                    <li>Syntax-related phenomena in any area, such as psycholinguistics, sociolinguistics, language typology, language acquisition, stylometry and translation, studied with quantitative methods based on empirical language data.</li>
-                    <li>Methods to explore and analyze corpora, treebanks or other empirical data for syntactic analysis.</li>
-                    <li>Theoretical studies based on syntactic data (hypothesis testing).</li>
-                    <li>Interrelations among syntactic factors.</li>
-                    <li>Linguistic units and the impact of annotation styles on syntactic analysis.</li>
-                    <li>Syntactic structures (tree structures, valency structures, etc.) and their distributions.</li>
-                    <li>Syntax modeling and its applications.</li>
-                    <li>Word order.</li>
-                    <li>AI-driven approaches to syntactic analysis, including the use of machine learning to identify patterns in large language datasets.</li>
-                </ul>
-            </section>
+        <section id="topics" class="section">
+            <h2>Topics</h2>
+            <p>QUASY welcomes work on any area of syntax that is grounded in empirical data. Topics include, but are not limited to:</p>
+            <ul class="topics-list">
+                <li>Word order</li>
+                <li>Syntactic structures and their distributions</li>
+                <li>Treebank and corpus methods</li>
+                <li>Hypothesis testing on syntactic data</li>
+                <li>Syntax modeling and its applications</li>
+                <li>AI-driven approaches to syntactic analysis</li>
+            </ul>
+            <p>For the full scope of the current workshop, see the <a href="https://quansyntax.github.io/quasy2027/cfp.html">QUASY 2027 Call for Papers</a>.</p>
+        </section>
 
-            <section id="contact" class="section">
-                <h2>Contact</h2>
-                <p>If you have any questions, please contact us at <a href="mailto:quansyntax@gmail.com">quansyntax@gmail.com</a>.</p>
-            </section>
-        </main>
-    </div>
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Questions about QUASY can be sent to <a href="mailto:quansyntax@gmail.com">quansyntax@gmail.com</a>. Calls for papers are published on each workshop’s website and through SyntaxFest.</p>
+        </section>
+    </main>
 
     <footer class="footer">
-        <p>© QUASY Conference Committee</p>
+        <p>© QUASY organisers</p>
     </footer>
 </body>
 </html>
