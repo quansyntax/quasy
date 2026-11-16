@@ -208,6 +208,11 @@ a:hover { color: var(--ink); }
     font-size: 0.95rem;
 }
 .footer p { margin: 0; }
+.footer .credit {
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: #b9c8cf;
+}
 
 /* ---------- Narrow screens ---------- */
 @media (max-width: 520px) {

@@ -22,7 +22,8 @@ keeps the series recognisable. The quickest start for a new workshop site is
 to copy https://github.com/quansyntax/quasy2027 and change the photo, dates
 and text.
 
-- **Logo**: the QUASY logo with the year, on a white or very light background
+- **Logo**: designed by Chenxin Zhang; credit the designer in the site footer.
+  Use the QUASY logo with the year, on a white or very light background
   (it was designed for white). Use a PNG export; the SVG uses live text and
   depends on locally installed fonts.
 - **Colours**:
